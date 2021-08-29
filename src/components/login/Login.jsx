@@ -28,7 +28,7 @@ export class Login extends Component {
     submitDetails = (e) => {
         e.preventDefault();
 
-        let dataUrl = `http://127.0.0.1:5000/login`;
+        let dataUrl = `http://localhost:32391/login`;
         Axios.post(dataUrl, this.state.details)
             .then((res) => {
                 localStorage.setItem("document", JSON.stringify(this.state.details));
