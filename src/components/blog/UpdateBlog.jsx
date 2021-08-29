@@ -22,7 +22,7 @@ export class UpdateBlog extends Component {
     componentDidMount() {
         let blobId = this.props.match.params.id;
         // console.log(blobId);
-        let dataUrl = `http://127.0.0.1:5000/api/blog/${blobId}`;
+        let dataUrl = `https://bigbasket4055.herokuapp.com/api/blog/${blobId}`;
         Axios.get(dataUrl)
             .then((res) => {
                 this.setState({
@@ -74,7 +74,7 @@ export class UpdateBlog extends Component {
     submitblog = (e) => {
         e.preventDefault();
 
-        let dataUrl = `http://127.0.0.1:5000/api/blog/${this.state.selectedBlog._id}`;
+        let dataUrl = `https://bigbasket4055.herokuapp.com/api/blog/${this.state.selectedBlog._id}`;
         Axios.put(dataUrl, this.state.selectedBlog)
             .then((res) => {
                 this.setState({
