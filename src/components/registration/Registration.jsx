@@ -33,7 +33,7 @@ class Registration extends Component {
     submitDetails = (e) => {
         e.preventDefault();
         localStorage.setItem("document", JSON.stringify(this.state.details));
-        let dataUrl = `http://localhost:32391/register`;
+        let dataUrl = `https://bigbasket4055.herokuapp.com/register`;
         Axios.post(dataUrl, this.state.details)
             .then((res) => {
                 this.setState({

@@ -28,7 +28,7 @@ export class Login extends Component {
     submitDetails = (e) => {
         e.preventDefault();
 
-        let dataUrl = `http://localhost:32391/login`;
+        let dataUrl = `https://bigbasket4055.herokuapp.com/login`;
         Axios.post(dataUrl, this.state.details)
             .then((res) => {
                 localStorage.setItem("document", JSON.stringify(this.state.details));
